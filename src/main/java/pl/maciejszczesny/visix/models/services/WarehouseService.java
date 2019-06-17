@@ -1,4 +1,4 @@
-package pl.maciejszczesny.visix.services;
+package pl.maciejszczesny.visix.models.services;
 
 public class WarehouseService {
 }

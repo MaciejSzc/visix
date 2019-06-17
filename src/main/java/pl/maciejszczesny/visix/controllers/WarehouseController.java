@@ -1,4 +1,4 @@
-package pl.maciejszczesny.visix;
+package pl.maciejszczesny.visix.controllers;
 
 public class WarehouseController {
 }
