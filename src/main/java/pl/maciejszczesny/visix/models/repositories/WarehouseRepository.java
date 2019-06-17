@@ -11,6 +11,4 @@ import java.util.Optional;
 @Repository
 public interface WarehouseRepository extends CrudRepository<WarehouseEntity, Integer> {
 
-    @Query(nativeQuery = true, value ="SELECT * FROM `warehouse` WHERE id = 1?")
-    Optional getItemById(int id);
 }

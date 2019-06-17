@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <title>Warehouse</title>
 </head>
 <body>
 
+<form action="/" method="post" th:object="${warehouseForm}">
+
+    Name: <input type="text" th:field="*{name}"> <br/>
+    Count: <input type="text" th:field="*{count}"> <br/>
+
+
+    <br/><br/>
+
+    <input type="submit" value="Add">
+</form>
+
+<br/><br/>
+<th:block th:each="item : ${getAll}">
+    <table>
+        <tr>
+            <td th:text="${item.getName()}"></td>
+            <td th:text="${item.getCount()}"></td>
+            <td><a th:href="${'/delete/item/' + item.getId()}" th:text="${'DELETE'}"></a></td>
+            <br/>
+        </tr>
+    </table>
+</th:block>
 </body>
 </html>
